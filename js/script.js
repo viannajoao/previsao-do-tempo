@@ -15,16 +15,19 @@ function showDisplay(city){
   temp.innerHTML = `${Math.floor(city.main.temp)}ºC`
   // temp.innerHTML = `Atual ${Math.floor(city.main.temp)}ºC | Temp.Max ${Math.floor(city.main.temp_max)}ºC | Temp.Min ${Math.floor(city.main.temp_min)}ºC`
   if(city.weather[0].icon == '02d'){
-    icon.src = `/nuvem.png`
+    icon.src = `/images/nuvem.png`
   }else if(city.weather[0].icon == '01d'){
-    icon.src = `/sol.png`
+    icon.src = `/images/sol.png`
   }else if(city.weather[0].icon == '03d'){
-    icon.src = `/nuvem (1).png`
+    icon.src = `/images/nuvem (1).png`
   }else if(city.weather[0].icon == '10d'){
-    icon.src = `/chuva.png`
+    icon.src = `/images/chuva.png`
   }else if(city.weather[0].icon == '04n'){
-    icon.src = `/nublado.png`
+    icon.src = `/images/nublado.png`
+  }else if(city.weather[0].icon == '50d'){
+    icon.src = `/images/nevoa.png`
   }
+
   // icon.src = `https://openweathermap.org/img/wn/${city.weather[0].icon}.png`
   weathers.innerHTML = `${city.weather[0].description}`
   umidifity.innerHTML = `${city.main.humidity}%`
